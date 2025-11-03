@@ -1,0 +1,19 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+qdrant-client
+langchain
+sentence-transformers
+transformers
+torch
+streamlit
+pydantic
+pdfplumber
+Pillow
+python-multipart
+boto3
+# Optional: if you have Bedrock SDK available, add its client here
+awscli
+agentic-doc
+spacy
