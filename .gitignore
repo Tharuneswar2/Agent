@@ -2,3 +2,5 @@
 myenv/*.env
 .env
 .env
+Testing/*
+__pycache__/*
