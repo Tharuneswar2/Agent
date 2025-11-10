@@ -1,54 +1,79 @@
-'use client';
+"use client";
 
-import { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Upload as UploadIcon, 
-  File, 
-  FileText, 
-  CheckCircle, 
-  XCircle, 
+import { useState, useCallback } from "react";
+import { motion } from "framer-motion";
+import {
+  Upload as UploadIcon,
+  File,
+  FileText,
+  CheckCircle,
+  XCircle,
   Loader2,
   FileSpreadsheet,
-  X
-} from 'lucide-react';
-import { MainLayout } from '@/components/MainLayout';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { useStore } from '@/store/useStore';
-import { cn } from '@/lib/utils';
-
-const mockDocuments = [
-  {
-    id: '1',
-    name: 'Q1_2024_Balance_Sheet.pdf',
-    type: 'pdf',
-    status: 'completed' as const,
-    uploadedAt: new Date('2024-01-15'),
-    size: '2.4 MB',
-  },
-  {
-    id: '2',
-    name: 'Tesla_Income_Statement_2023.xlsx',
-    type: 'xlsx',
-    status: 'completed' as const,
-    uploadedAt: new Date('2024-01-14'),
-    size: '1.8 MB',
-  },
-  {
-    id: '3',
-    name: 'Cash_Flow_Analysis.csv',
-    type: 'csv',
-    status: 'processing' as const,
-    uploadedAt: new Date('2024-01-14'),
-    size: '856 KB',
-  },
-];
+  X,
+} from "lucide-react";
+import { MainLayout } from "@/components/MainLayout";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function UploadPage() {
   const [isDragging, setIsDragging] = useState(false);
-  const { documents, addDocument } = useStore();
-  const [localDocs, setLocalDocs] = useState(mockDocuments);
+  const [localDocs, setLocalDocs] = useState<any[]>([]);
+
+  const BACKEND_URL =
+    process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
+
+  const uploadFileToBackend = async (file: File, docId: string) => {
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      // Send POST request to FastAPI endpoint
+      const response = await fetch(`${BACKEND_URL}/parse_router`, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) throw new Error("Upload failed");
+      const result = await response.json();
+
+      // Update document status
+      setLocalDocs((prev) =>
+        prev.map((doc) =>
+          doc.id === docId
+            ? { ...doc, status: "completed", backendResponse: result }
+            : doc
+        )
+      );
+    } catch (error) {
+      console.error(error);
+      setLocalDocs((prev) =>
+        prev.map((doc) =>
+          doc.id === docId ? { ...doc, status: "failed" } : doc
+        )
+      );
+    }
+  };
+
+  const handleFiles = useCallback((files: File[]) => {
+    files.forEach((file) => {
+      const id = Date.now().toString() + Math.random();
+      const newDoc = {
+        id,
+        name: file.name,
+        type: file.name.split(".").pop() || "file",
+        status: "uploading" as const,
+        uploadedAt: new Date(),
+        size: `${(file.size / 1024 / 1024).toFixed(2)} MB`,
+      };
+
+      setLocalDocs((prev) => [newDoc, ...prev]);
+
+      // Start backend upload
+      uploadFileToBackend(file, id);
+    });
+  }, []);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -60,90 +85,38 @@ export default function UploadPage() {
     setIsDragging(false);
   }, []);
 
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    
-    const files = Array.from(e.dataTransfer.files);
-    files.forEach((file) => {
-      const newDoc = {
-        id: Date.now().toString() + Math.random(),
-        name: file.name,
-        type: file.name.split('.').pop() || 'file',
-        status: 'uploading' as const,
-        uploadedAt: new Date(),
-        size: `${(file.size / 1024 / 1024).toFixed(2)} MB`,
-      };
-      
-      setLocalDocs((prev) => [newDoc, ...prev]);
-      
-      // Simulate upload and processing
-      setTimeout(() => {
-        setLocalDocs((prev) =>
-          prev.map((doc) =>
-            doc.id === newDoc.id ? { ...doc, status: 'processing' as const } : doc
-          )
-        );
-      }, 2000);
-      
-      setTimeout(() => {
-        setLocalDocs((prev) =>
-          prev.map((doc) =>
-            doc.id === newDoc.id ? { ...doc, status: 'completed' as const } : doc
-          )
-        );
-      }, 5000);
-    });
-  }, []);
+  const handleDrop = useCallback(
+    (e: React.DragEvent) => {
+      e.preventDefault();
+      setIsDragging(false);
+      handleFiles(Array.from(e.dataTransfer.files));
+    },
+    [handleFiles]
+  );
 
-  const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(e.target.files || []);
-    files.forEach((file) => {
-      const newDoc = {
-        id: Date.now().toString() + Math.random(),
-        name: file.name,
-        type: file.name.split('.').pop() || 'file',
-        status: 'uploading' as const,
-        uploadedAt: new Date(),
-        size: `${(file.size / 1024 / 1024).toFixed(2)} MB`,
-      };
-      
-      setLocalDocs((prev) => [newDoc, ...prev]);
-      
-      setTimeout(() => {
-        setLocalDocs((prev) =>
-          prev.map((doc) =>
-            doc.id === newDoc.id ? { ...doc, status: 'processing' as const } : doc
-          )
-        );
-      }, 2000);
-      
-      setTimeout(() => {
-        setLocalDocs((prev) =>
-          prev.map((doc) =>
-            doc.id === newDoc.id ? { ...doc, status: 'completed' as const } : doc
-          )
-        );
-      }, 5000);
-    });
-  }, []);
+  const handleFileInput = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      handleFiles(Array.from(e.target.files || []));
+    },
+    [handleFiles]
+  );
 
   const getFileIcon = (type: string) => {
-    if (type === 'pdf') return FileText;
-    if (type === 'xlsx' || type === 'xls' || type === 'csv') return FileSpreadsheet;
+    if (type === "pdf") return FileText;
+    if (["xlsx", "xls", "csv"].includes(type)) return FileSpreadsheet;
     return File;
   };
 
   const getStatusIcon = (status: string) => {
-    if (status === 'completed') return CheckCircle;
-    if (status === 'failed') return XCircle;
+    if (status === "completed") return CheckCircle;
+    if (status === "failed") return XCircle;
     return Loader2;
   };
 
   const getStatusColor = (status: string) => {
-    if (status === 'completed') return 'text-green-500';
-    if (status === 'failed') return 'text-red-500';
-    return 'text-blue-500';
+    if (status === "completed") return "text-green-500";
+    if (status === "failed") return "text-red-500";
+    return "text-blue-500";
   };
 
   return (
@@ -169,10 +142,10 @@ export default function UploadPage() {
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
                 className={cn(
-                  'relative flex flex-col items-center justify-center rounded-lg border-2 border-dashed p-12 transition-colors',
+                  "relative flex flex-col items-center justify-center rounded-lg border-2 border-dashed p-12 transition-colors",
                   isDragging
-                    ? 'border-primary bg-primary/5'
-                    : 'border-muted-foreground/25 hover:border-primary/50'
+                    ? "border-primary bg-primary/5"
+                    : "border-muted-foreground/25 hover:border-primary/50"
                 )}
               >
                 <UploadIcon className="h-12 w-12 text-muted-foreground mb-4" />
@@ -223,7 +196,7 @@ export default function UploadPage() {
                       <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                         <FileIcon className="h-6 w-6 text-primary" />
                       </div>
-                      
+
                       <div className="flex-1 min-w-0">
                         <p className="font-medium truncate">{doc.name}</p>
                         <div className="flex items-center gap-4 mt-1">
@@ -239,20 +212,29 @@ export default function UploadPage() {
                       <div className="flex items-center gap-2">
                         <StatusIcon
                           className={cn(
-                            'h-5 w-5',
+                            "h-5 w-5",
                             statusColor,
-                            doc.status === 'processing' && 'animate-spin'
+                            doc.status === "uploading" && "animate-spin"
                           )}
                         />
-                        <span className={cn('text-sm font-medium', statusColor)}>
-                          {doc.status === 'uploading' && 'Uploading...'}
-                          {doc.status === 'processing' && 'Processing...'}
-                          {doc.status === 'completed' && 'Completed'}
-                          {doc.status === 'failed' && 'Failed'}
+                        <span
+                          className={cn("text-sm font-medium", statusColor)}
+                        >
+                          {doc.status === "uploading" && "Uploading..."}
+                          {doc.status === "completed" && "Completed"}
+                          {doc.status === "failed" && "Failed"}
                         </span>
                       </div>
 
-                      <Button variant="ghost" size="icon">
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() =>
+                          setLocalDocs((prev) =>
+                            prev.filter((d) => d.id !== doc.id)
+                          )
+                        }
+                      >
                         <X className="h-4 w-4" />
                       </Button>
                     </motion.div>

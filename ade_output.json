@@ -1,0 +1,628 @@
+{
+  "extraction": {
+    "company_name": "Reliance Industries Limited",
+    "fiscal_year": "2024-25",
+    "report_type": "Integrated Annual Report",
+    "report_date": "2025-04-25",
+    "financial_highlights": {
+      "total_revenue": "10,71,174 crore",
+      "net_income": "81,309 crore",
+      "operating_profit": "1,83,422 crore",
+      "earnings_per_share": "26.06",
+      "dividend_per_share": "5.50",
+      "total_assets": "10,22,401 crore",
+      "total_liabilities": "4,79,314 crore",
+      "shareholders_equity": "5,43,087 crore"
+    },
+    "balance_sheet": {
+      "assets": {
+        "current_assets": "2,69,563 crore",
+        "non_current_assets": "7,52,838 crore",
+        "total_assets": "10,22,401 crore"
+      },
+      "liabilities": {
+        "current_liabilities": "2,57,935 crore",
+        "non_current_liabilities": "2,21,379 crore",
+        "total_liabilities": "4,79,314 crore"
+      },
+      "equity": {
+        "share_capital": "13,532 crore",
+        "retained_earnings": "1,31,709 crore",
+        "reserves": "3,97,846 crore",
+        "total_equity": "5,43,087 crore"
+      }
+    },
+    "income_statement": {
+      "revenue": "5,32,792 crore",
+      "cost_of_goods_sold": "3,84,021 crore",
+      "gross_profit": "1,48,771 crore",
+      "operating_expenses": "70,074 crore",
+      "operating_income": "74,163 crore",
+      "interest_expense": "10,054 crore",
+      "tax_expense": "10,866 crore",
+      "net_income": "35,262 crore"
+    },
+    "cash_flow_statement": {
+      "operating_cash_flow": "79,392 crore",
+      "investing_cash_flow": "-28,106 crore",
+      "financing_cash_flow": "-38,063 crore",
+      "net_cash_flow": "13,223 crore",
+      "closing_cash_balance": "82,471 crore"
+    },
+    "management_discussion": "The Company delivered a resilient performance for FY 2024-25, emphasising the strength of its India-focused, diverse business portfolio. Amidst prolonged global volatility, the Company delivered balanced and consistent growth across its businesses. Consolidated revenue increased by 7.1% to \u20b910,71,174 crore, EBITDA grew by 2.9% to \u20b91,83,422 crore, and PAT rose 2.9% year-on-year to \u20b981,309 crore. Each business played a vital role in this performance: Retail crossed \u20b93,30,000 crore in turnover, Digital Services had 488 million users, Media built a large institution, Oil to Chemicals demonstrated resilience, Oil & Gas delivered record EBITDA, and New Energy transitioned from vision to execution.",
+    "business_overview": "Reliance Industries Limited operates across energy, retail, telecom, media, and green technologies. The company is India's largest private sector enterprise and a Fortune Global 500 leader. Its business segments include Oil to Chemicals, Oil and Gas, Retail, and Digital Services, with a focus on technology-driven innovation and sustainable growth.",
+    "future_outlook": "Reliance is investing in clean energy, digital transformation, and circular economy solutions. The company aims to achieve Net Carbon Zero by 2035, foster inclusive development, and shape a resilient, future-ready ecosystem\u2014contributing to India's vision of a Viksit Bharat.",
+    "auditors_report": "The auditors have issued an unmodified opinion on the Standalone and Consolidated Financial Statements for the year ended March 31, 2025. The financial statements give a true and fair view in conformity with the Indian Accounting Standards and other accounting principles generally accepted in India. There are no qualifications, reservations, adverse remarks, or disclaimers in the auditors' report.",
+    "board_of_directors": [
+      {
+        "name": "Mukesh D. Ambani",
+        "designation": "Chairman and Managing Director"
+      },
+      {
+        "name": "Nikhil R. Meswani",
+        "designation": "Executive Director"
+      },
+      {
+        "name": "Hital R. Meswani",
+        "designation": "Executive Director"
+      },
+      {
+        "name": "P. M. S. Prasad",
+        "designation": "Executive Director"
+      },
+      {
+        "name": "Anant M. Ambani",
+        "designation": "Executive Director"
+      },
+      {
+        "name": "Dr. Shumeet Banerji",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "Arundhati Bhattacharya",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "His Excellency Yasir Othman H. Al Rumayyan",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "K. V. Chowdary",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "K. V. Kamath",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "Haigreve Khaitan",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "Isha M. Ambani",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "Akash M. Ambani",
+        "designation": "Non-Executive Director"
+      },
+      {
+        "name": "Dinesh Kanabar",
+        "designation": "Non-Executive Director"
+      }
+    ],
+    "subsidiaries": [
+      "7-India Convenience Retail Limited",
+      "Aaidea Solutions Limited",
+      "Accops Systems FZ-LLC",
+      "Accops Systems Private Limited",
+      "Actoserba Active Wholesale Limited"
+    ],
+    "notes_to_accounts": [
+      "The financial statements have been prepared in accordance with Indian Accounting Standards (Ind AS) notified under the Companies (Indian Accounting Standards) Rules, 2015 and presentation requirements of Division II of Schedule III to the Companies Act, 2013. The company follows the indirect method prescribed in Ind AS 7 for presentation of its cash flows. The company has only one class of equity shares having face value of \u20b9 10 each. The holder of the equity share is entitled to dividend right and voting right in the same proportion as the capital paid-up on such equity share bears to the total paid-up equity share capital of the Company."
+    ]
+  },
+  "extraction_metadata": {
+    "company_name": {
+      "value": "Reliance Industries Limited",
+      "references": [
+        "02256c39-87f1-4bef-8ee6-53683f5dd90e",
+        "b0fc9fa2-8dbe-4215-ae69-62c88a67e767"
+      ]
+    },
+    "fiscal_year": {
+      "value": "2024-25",
+      "references": [
+        "bfff107a-30b9-4fae-99e6-9aa454a4c56d"
+      ]
+    },
+    "report_type": {
+      "value": "Integrated Annual Report",
+      "references": [
+        "bfff107a-30b9-4fae-99e6-9aa454a4c56d"
+      ]
+    },
+    "report_date": {
+      "value": "2025-04-25",
+      "references": [
+        "a41b3120-b76a-4af9-a569-e8df60ad8f8d"
+      ]
+    },
+    "financial_highlights": {
+      "total_revenue": {
+        "value": "10,71,174 crore",
+        "references": [
+          "e522c027-41af-4ad1-af9f-00d531153ace"
+        ]
+      },
+      "net_income": {
+        "value": "81,309 crore",
+        "references": [
+          "e522c027-41af-4ad1-af9f-00d531153ace"
+        ]
+      },
+      "operating_profit": {
+        "value": "1,83,422 crore",
+        "references": [
+          "e522c027-41af-4ad1-af9f-00d531153ace"
+        ]
+      },
+      "earnings_per_share": {
+        "value": "26.06",
+        "references": [
+          "84-2h"
+        ]
+      },
+      "dividend_per_share": {
+        "value": "5.50",
+        "references": [
+          "93998125-f529-45ea-8709-dc0b2de1fb6b"
+        ]
+      },
+      "total_assets": {
+        "value": "10,22,401 crore",
+        "references": [
+          "83-1u"
+        ]
+      },
+      "total_liabilities": {
+        "value": "4,79,314 crore",
+        "references": [
+          "83-3j"
+        ]
+      },
+      "shareholders_equity": {
+        "value": "5,43,087 crore",
+        "references": [
+          "83-1T"
+        ]
+      }
+    },
+    "balance_sheet": {
+      "assets": {
+        "current_assets": {
+          "value": "2,69,563 crore",
+          "references": [
+            "83-1q"
+          ]
+        },
+        "non_current_assets": {
+          "value": "7,52,838 crore",
+          "references": [
+            "83-Q"
+          ]
+        },
+        "total_assets": {
+          "value": "10,22,401 crore",
+          "references": [
+            "83-1u"
+          ]
+        }
+      },
+      "liabilities": {
+        "current_liabilities": {
+          "value": "2,57,935 crore",
+          "references": [
+            "83-3f"
+          ]
+        },
+        "non_current_liabilities": {
+          "value": "2,21,379 crore",
+          "references": [
+            "83-2x"
+          ]
+        },
+        "total_liabilities": {
+          "value": "4,79,314 crore",
+          "references": [
+            "83-3j"
+          ]
+        }
+      },
+      "equity": {
+        "share_capital": {
+          "value": "13,532 crore",
+          "references": [
+            "83-1L"
+          ]
+        },
+        "retained_earnings": {
+          "value": "1,31,709 crore",
+          "references": [
+            "85-2a"
+          ]
+        },
+        "reserves": {
+          "value": "3,97,846 crore",
+          "references": [
+            "85-38"
+          ]
+        },
+        "total_equity": {
+          "value": "5,43,087 crore",
+          "references": [
+            "83-1T"
+          ]
+        }
+      }
+    },
+    "income_statement": {
+      "revenue": {
+        "value": "5,32,792 crore",
+        "references": [
+          "84-w"
+        ]
+      },
+      "cost_of_goods_sold": {
+        "value": "3,84,021 crore",
+        "references": [
+          "84-M"
+        ]
+      },
+      "gross_profit": {
+        "value": "1,48,771 crore",
+        "references": [
+          "84-w",
+          "84-M"
+        ]
+      },
+      "operating_expenses": {
+        "value": "70,074 crore",
+        "references": [
+          "84-12",
+          "84-1e"
+        ]
+      },
+      "operating_income": {
+        "value": "74,163 crore",
+        "references": [
+          "66-3r"
+        ]
+      },
+      "interest_expense": {
+        "value": "10,054 crore",
+        "references": [
+          "84-16"
+        ]
+      },
+      "tax_expense": {
+        "value": "10,866 crore",
+        "references": [
+          "96-B"
+        ]
+      },
+      "net_income": {
+        "value": "35,262 crore",
+        "references": [
+          "84-1C"
+        ]
+      }
+    },
+    "cash_flow_statement": {
+      "operating_cash_flow": {
+        "value": "79,392 crore",
+        "references": [
+          "86-Y"
+        ]
+      },
+      "investing_cash_flow": {
+        "value": "-28,106 crore",
+        "references": [
+          "86-1y"
+        ]
+      },
+      "financing_cash_flow": {
+        "value": "-38,063 crore",
+        "references": [
+          "86-22"
+        ]
+      },
+      "net_cash_flow": {
+        "value": "13,223 crore",
+        "references": [
+          "86-25"
+        ]
+      },
+      "closing_cash_balance": {
+        "value": "82,471 crore",
+        "references": [
+          "86-2b"
+        ]
+      }
+    },
+    "management_discussion": {
+      "value": "The Company delivered a resilient performance for FY 2024-25, emphasising the strength of its India-focused, diverse business portfolio. Amidst prolonged global volatility, the Company delivered balanced and consistent growth across its businesses. Consolidated revenue increased by 7.1% to \u20b910,71,174 crore, EBITDA grew by 2.9% to \u20b91,83,422 crore, and PAT rose 2.9% year-on-year to \u20b981,309 crore. Each business played a vital role in this performance: Retail crossed \u20b93,30,000 crore in turnover, Digital Services had 488 million users, Media built a large institution, Oil to Chemicals demonstrated resilience, Oil & Gas delivered record EBITDA, and New Energy transitioned from vision to execution.",
+      "references": [
+        "e522c027-41af-4ad1-af9f-00d531153ace",
+        "b4b096db-40fd-4399-b4ec-63d4e7b0a37b"
+      ]
+    },
+    "business_overview": {
+      "value": "Reliance Industries Limited operates across energy, retail, telecom, media, and green technologies. The company is India's largest private sector enterprise and a Fortune Global 500 leader. Its business segments include Oil to Chemicals, Oil and Gas, Retail, and Digital Services, with a focus on technology-driven innovation and sustainable growth.",
+      "references": [
+        "f54993e4-68c5-440f-bf6f-0cdb3218cb2e",
+        "f55f03f0-3a4a-4ea9-a192-5a3c92bd06cc"
+      ]
+    },
+    "future_outlook": {
+      "value": "Reliance is investing in clean energy, digital transformation, and circular economy solutions. The company aims to achieve Net Carbon Zero by 2035, foster inclusive development, and shape a resilient, future-ready ecosystem\u2014contributing to India's vision of a Viksit Bharat.",
+      "references": [
+        "c16c0ea5-f1d6-4c5b-97a4-88c6c2f4b9e1"
+      ]
+    },
+    "auditors_report": {
+      "value": "The auditors have issued an unmodified opinion on the Standalone and Consolidated Financial Statements for the year ended March 31, 2025. The financial statements give a true and fair view in conformity with the Indian Accounting Standards and other accounting principles generally accepted in India. There are no qualifications, reservations, adverse remarks, or disclaimers in the auditors' report.",
+      "references": [
+        "0ff73e97-2bca-4819-a468-d544220f9d7d",
+        "275005e8-7a50-45c3-a2db-019d77ba469d"
+      ]
+    },
+    "board_of_directors": [
+      {
+        "name": {
+          "value": "Mukesh D. Ambani",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Chairman and Managing Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Nikhil R. Meswani",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        },
+        "designation": {
+          "value": "Executive Director",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Hital R. Meswani",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        },
+        "designation": {
+          "value": "Executive Director",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "P. M. S. Prasad",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        },
+        "designation": {
+          "value": "Executive Director",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Anant M. Ambani",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        },
+        "designation": {
+          "value": "Executive Director",
+          "references": [
+            "4270d171-9953-470b-86eb-a44159d43cbd"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Dr. Shumeet Banerji",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Arundhati Bhattacharya",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "His Excellency Yasir Othman H. Al Rumayyan",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "K. V. Chowdary",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "K. V. Kamath",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Haigreve Khaitan",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Isha M. Ambani",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Akash M. Ambani",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      },
+      {
+        "name": {
+          "value": "Dinesh Kanabar",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        },
+        "designation": {
+          "value": "Non-Executive Director",
+          "references": [
+            "42a920dd-7d73-4a46-ab01-8e1728933440"
+          ]
+        }
+      }
+    ],
+    "subsidiaries": [
+      {
+        "value": "7-India Convenience Retail Limited",
+        "references": [
+          "164-U"
+        ]
+      },
+      {
+        "value": "Aaidea Solutions Limited",
+        "references": [
+          "164-1b"
+        ]
+      },
+      {
+        "value": "Accops Systems FZ-LLC",
+        "references": [
+          "164-1s"
+        ]
+      },
+      {
+        "value": "Accops Systems Private Limited",
+        "references": [
+          "164-20"
+        ]
+      },
+      {
+        "value": "Actoserba Active Wholesale Limited",
+        "references": [
+          "164-2h"
+        ]
+      }
+    ],
+    "notes_to_accounts": [
+      {
+        "value": "The financial statements have been prepared in accordance with Indian Accounting Standards (Ind AS) notified under the Companies (Indian Accounting Standards) Rules, 2015 and presentation requirements of Division II of Schedule III to the Companies Act, 2013. The company follows the indirect method prescribed in Ind AS 7 for presentation of its cash flows. The company has only one class of equity shares having face value of \u20b9 10 each. The holder of the equity share is entitled to dividend right and voting right in the same proportion as the capital paid-up on such equity share bears to the total paid-up equity share capital of the Company.",
+        "references": [
+          "f8a25447-2fab-4dba-b251-ddaceb1973e0",
+          "13.6"
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "filename": "Reliance_2025_AnnualReport.md",
+    "org_id": null,
+    "duration_ms": 220874,
+    "credit_usage": 397.6,
+    "job_id": "x0v22raa7j350vz39lkrb2rgs",
+    "version": "extract-20250930"
+  }
+}

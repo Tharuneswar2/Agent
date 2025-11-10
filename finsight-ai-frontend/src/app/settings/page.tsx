@@ -1,14 +1,60 @@
-'use client';
+"use client";
 
-import { MainLayout } from '@/components/MainLayout';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Switch } from '@/components/ui/switch';
-import { Separator } from '@/components/ui/separator';
+import { useState } from "react";
+import axios from "axios";
+import { MainLayout } from "@/components/MainLayout";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { Separator } from "@/components/ui/separator";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function SettingsPage() {
+  const { toast } = useToast();
+  const [apiKey, setApiKey] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleLoadApiKey = async () => {
+    if (!apiKey.trim()) {
+      toast({
+        title: "Missing API Key",
+        description: "Please enter your API key before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await axios.post("http://localhost:8000/load_api_key", {
+        api_key: apiKey,
+      });
+      toast({
+        title: "✅ API Key Loaded",
+        description: response.data?.status || "API key loaded successfully!",
+      });
+      setApiKey(""); // clear input on success
+    } catch (error: any) {
+      console.error("Error loading API key:", error);
+      toast({
+        title: "❌ Failed to Load API Key",
+        description:
+          error?.response?.data?.detail || "Could not connect to backend.",
+        variant: "destructive",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <MainLayout>
       <div className="p-8 space-y-8 max-w-4xl">
@@ -23,9 +69,7 @@ export default function SettingsPage() {
         <Card>
           <CardHeader>
             <CardTitle>Profile</CardTitle>
-            <CardDescription>
-              Update your personal information
-            </CardDescription>
+            <CardDescription>Update your personal information</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid gap-4 md:grid-cols-2">
@@ -92,28 +136,23 @@ export default function SettingsPage() {
           <CardHeader>
             <CardTitle>API Configuration</CardTitle>
             <CardDescription>
-              Manage your API endpoints and authentication
+              Load API key to enable backend operations
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="apiEndpoint">API Endpoint</Label>
-              <Input 
-                id="apiEndpoint" 
-                defaultValue="https://api.finsight.ai/v1" 
-                readOnly 
-              />
-            </div>
-            <div className="space-y-2">
               <Label htmlFor="apiKey">API Key</Label>
-              <Input 
-                id="apiKey" 
-                type="password" 
-                defaultValue="sk_live_••••••••••••••••" 
-                readOnly 
+              <Input
+                id="apiKey"
+                type="password"
+                value={apiKey}
+                onChange={(e) => setApiKey(e.target.value)}
+                placeholder="Enter your Vision Agent API Key"
               />
-              <Button variant="outline" size="sm">Regenerate Key</Button>
             </div>
+            <Button onClick={handleLoadApiKey} disabled={loading}>
+              {loading ? "Loading..." : "Load API Key"}
+            </Button>
           </CardContent>
         </Card>
       </div>

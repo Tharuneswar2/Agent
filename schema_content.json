@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "properties": {
+    "company_name": { "type": "string" },
+    "fiscal_year": { "type": "string" },
+    "report_type": {
+      "type": "string",
+      "description": "e.g., Annual Report, Quarterly Report"
+    },
+    "report_date": { "type": "string" },
+
+    "financial_highlights": {
+      "type": "object",
+      "properties": {
+        "total_revenue": { "type": "string" },
+        "net_income": { "type": "string" },
+        "operating_profit": { "type": "string" },
+        "earnings_per_share": { "type": "string" },
+        "dividend_per_share": { "type": "string" },
+        "total_assets": { "type": "string" },
+        "total_liabilities": { "type": "string" },
+        "shareholders_equity": { "type": "string" }
+      }
+    },
+
+    "balance_sheet": {
+      "type": "object",
+      "properties": {
+        "assets": {
+          "type": "object",
+          "properties": {
+            "current_assets": { "type": "string" },
+            "non_current_assets": { "type": "string" },
+            "total_assets": { "type": "string" }
+          }
+        },
+        "liabilities": {
+          "type": "object",
+          "properties": {
+            "current_liabilities": { "type": "string" },
+            "non_current_liabilities": { "type": "string" },
+            "total_liabilities": { "type": "string" }
+          }
+        },
+        "equity": {
+          "type": "object",
+          "properties": {
+            "share_capital": { "type": "string" },
+            "retained_earnings": { "type": "string" },
+            "reserves": { "type": "string" },
+            "total_equity": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "income_statement": {
+      "type": "object",
+      "properties": {
+        "revenue": { "type": "string" },
+        "cost_of_goods_sold": { "type": "string" },
+        "gross_profit": { "type": "string" },
+        "operating_expenses": { "type": "string" },
+        "operating_income": { "type": "string" },
+        "interest_expense": { "type": "string" },
+        "tax_expense": { "type": "string" },
+        "net_income": { "type": "string" }
+      }
+    },
+
+    "cash_flow_statement": {
+      "type": "object",
+      "properties": {
+        "operating_cash_flow": { "type": "string" },
+        "investing_cash_flow": { "type": "string" },
+        "financing_cash_flow": { "type": "string" },
+        "net_cash_flow": { "type": "string" },
+        "closing_cash_balance": { "type": "string" }
+      }
+    },
+
+    "management_discussion": { "type": "string" },
+    "business_overview": { "type": "string" },
+    "future_outlook": { "type": "string" },
+
+    "auditors_report": { "type": "string" },
+    "board_of_directors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "designation": { "type": "string" }
+        }
+      }
+    },
+
+    "subsidiaries": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "notes_to_accounts": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["company_name", "fiscal_year", "financial_highlights"]
+}

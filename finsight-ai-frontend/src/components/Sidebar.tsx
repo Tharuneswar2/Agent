@@ -1,23 +1,21 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { 
-  LayoutDashboard, 
-  Upload, 
-  MessageSquare, 
-  Lightbulb, 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  LayoutDashboard,
+  Upload,
+  MessageSquare,
+  Lightbulb,
   Settings,
-  TrendingUp
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+  TrendingUp,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-  { name: 'Upload', href: '/upload', icon: Upload },
-  { name: 'Chat', href: '/chat', icon: MessageSquare },
-  { name: 'Insights', href: '/insights', icon: Lightbulb },
-  { name: 'Settings', href: '/settings', icon: Settings },
+  { name: "Upload", href: "/upload", icon: Upload },
+  { name: "Chat", href: "/chat", icon: MessageSquare },
+  { name: "Settings", href: "/settings", icon: Settings },
 ];
 
 export function Sidebar() {
@@ -42,16 +40,16 @@ export function Sidebar() {
           {menuItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.href;
-            
+
             return (
               <Link
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
+                  "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                   isActive
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                 )}
               >
                 <Icon className="h-5 w-5" />

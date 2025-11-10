@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { Sidebar } from './Sidebar';
-import { Navbar } from './Navbar';
+import { Sidebar } from "./Sidebar";
+import { Navbar } from "./Navbar";
+import { Toast } from "@/components/ui/toast";
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,9 +10,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       <Sidebar />
       <div className="pl-64">
         <Navbar />
-        <main className="min-h-[calc(100vh-4rem)] pt-16">
-          {children}
-        </main>
+        <main className="min-h-[calc(100vh-4rem)] pt-16">{children}</main>
       </div>
     </div>
   );
